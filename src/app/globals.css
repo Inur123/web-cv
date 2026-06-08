@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Force dark variables globally */
+    --bg-cyber: #090d16; /* Deep premium midnight */
+    --text-cyber: #f1f5f9; /* Slate 100 */
+    --border-cyber: #1e293b; /* Slate 800 */
+    --card-cyber: #111827; /* Gray 900 */
+    --grid-opacity: rgba(99, 102, 241, 0.04); /* Subtle indigo grid */
+    --scrollbar-track: #090d16;
+    --scrollbar-thumb: #334155;
+  }
+
+  body {
+    background-color: var(--bg-cyber);
+    color: var(--text-cyber);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6366f1; /* Soft Indigo */
+  }
+}
+
+/* Soft Grid Background Pattern */
+.bg-grid-cyber {
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, var(--grid-opacity) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-opacity) 1px, transparent 1px);
+}
+
+/* Redefining shadow utilities to be soft glowing shadows */
+.neo-shadow-pink {
+  box-shadow: 0 10px 30px -10px rgba(244, 63, 94, 0.12);
+  border: 1px solid rgba(244, 63, 94, 0.15);
+}
+
+.neo-shadow-cyan {
+  box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.12);
+  border: 1px solid rgba(6, 182, 212, 0.15);
+}
+
+.neo-shadow-lime {
+  box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.neo-shadow-yellow {
+  box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+}
