@@ -138,6 +138,70 @@ const jsonLd = {
   },
 };
 
+// WebSite schema — membantu Google menampilkan sitelinks di hasil pencarian
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Muhammad Zainur Roziqin – Portofolio",
+  url: siteUrl,
+  description:
+    "Portofolio profesional Muhammad Zainur Roziqin, Laravel Fullstack Developer dari Jawa Timur, Indonesia.",
+  inLanguage: "id-ID",
+  author: {
+    "@type": "Person",
+    name: "Muhammad Zainur Roziqin",
+  },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${siteUrl}/?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
+// SiteNavigationElement — bagian-bagian halaman yang bisa muncul sebagai sitelinks
+const navJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Navigasi Portofolio Zainur",
+  itemListElement: [
+    {
+      "@type": "SiteLinksSearchBox",
+      url: siteUrl,
+    },
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Tentang Saya",
+      description: "Profil, latar belakang pendidikan, dan informasi personal Muhammad Zainur Roziqin sebagai Laravel Fullstack Developer.",
+      url: `${siteUrl}/#about`,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Pengalaman Kerja",
+      description: "Riwayat pengalaman profesional dan pekerjaan di bidang web development, termasuk di PT Tiga Serangkai Inti Corpora.",
+      url: `${siteUrl}/#experience`,
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Proyek",
+      description: "Koleksi proyek web yang telah dibangun, meliputi sistem absensi QR, website desa, portal organisasi, dan REST API.",
+      url: `${siteUrl}/#projects`,
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "Keahlian",
+      description: "Tech stack dan keahlian teknis: Laravel, PHP, Livewire, MySQL, Apache Kafka, Next.js, dan Linux VPS.",
+      url: `${siteUrl}/#skills`,
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -149,6 +213,14 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(navJsonLd) }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
