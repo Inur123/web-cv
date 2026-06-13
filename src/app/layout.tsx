@@ -168,10 +168,6 @@ const navJsonLd = {
   name: "Navigasi Portofolio Zainur",
   itemListElement: [
     {
-      "@type": "SiteLinksSearchBox",
-      url: siteUrl,
-    },
-    {
       "@type": "ListItem",
       position: 1,
       name: "Tentang Saya",
