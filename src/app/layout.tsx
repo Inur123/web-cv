@@ -8,7 +8,7 @@ const plusJakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-const siteUrl = "https://zainur.my.id";
+const siteUrl = "https://www.zainur.my.id";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
