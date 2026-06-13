@@ -1,0 +1,17 @@
+{
+  "name": "Muhammad Zainur Roziqin",
+  "short_name": "Zainur.dev",
+  "description": "Portofolio Laravel Fullstack Developer – Muhammad Zainur Roziqin",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#6366f1",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
