@@ -138,12 +138,13 @@ export default function Home() {
               </div>
 
               {/* Dynamic Scroll Indicator Nav */}
-              <nav className="hidden lg:block pt-12">
+              <nav className="hidden lg:block pt-12" aria-label="Navigasi halaman">
                 <ul className="space-y-4 w-max font-mono text-xs font-semibold uppercase tracking-wider text-slate-500">
                   {sections.map((sec) => (
                     <li key={sec}>
-                      <button 
-                        onClick={() => scrollToSection(sec)}
+                      <a 
+                        href={`#${sec}`}
+                        onClick={(e) => { e.preventDefault(); scrollToSection(sec); }}
                         className={`group flex items-center py-2 transition-all cursor-pointer ${
                           activeSection === sec ? "text-indigo-400" : "hover:text-slate-200"
                         }`}
@@ -152,7 +153,7 @@ export default function Home() {
                           activeSection === sec ? "w-16 bg-indigo-400" : "w-8 bg-slate-600 group-hover:w-16"
                         }`} />
                         <span>{sec}</span>
-                      </button>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -189,13 +190,13 @@ export default function Home() {
               </div>
 
               <div className="flex space-x-4 text-slate-450">
-                <a href="https://github.com/Inur123?tab=repositories" target="_blank" rel="noreferrer" className="hover:text-slate-200 transition-colors">
+                <a href="https://github.com/Inur123?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="GitHub Muhammad Zainur Roziqin" className="hover:text-slate-200 transition-colors">
                   <GithubIcon className="h-5 w-5" />
                 </a>
-                <a href="https://www.linkedin.com/in/muhammad-zainur-roziqin-8453b130a/" target="_blank" rel="noreferrer" className="hover:text-slate-200 transition-colors">
+                <a href="https://www.linkedin.com/in/muhammad-zainur-roziqin-8453b130a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Muhammad Zainur Roziqin" className="hover:text-slate-200 transition-colors">
                   <LinkedinIcon className="h-5 w-5" />
                 </a>
-                <a href="https://www.instagram.com/inurzainur87/" target="_blank" rel="noreferrer" className="hover:text-slate-200 transition-colors">
+                <a href="https://www.instagram.com/inurzainur87/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Muhammad Zainur Roziqin" className="hover:text-slate-200 transition-colors">
                   <InstagramIcon className="h-5 w-5" />
                 </a>
               </div>
@@ -307,8 +308,8 @@ export default function Home() {
             </section>
 
             {/* Footer */}
-            <footer className="pt-12 text-xs text-white font-mono">
-              <p>Desain ini dibuat oleh Muhammad Zainur Roziqin.</p>
+            <footer className="pt-12 text-xs text-slate-500 font-mono">
+              <p>© {new Date().getFullYear()} Muhammad Zainur Roziqin. Dibuat dengan Next.js &amp; Tailwind CSS.</p>
             </footer>
 
           </main>

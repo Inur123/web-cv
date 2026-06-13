@@ -91,9 +91,6 @@ export const metadata: Metadata = {
     apple: "/favicon.ico",
   },
   manifest: "/manifest.json",
-  other: {
-    "google-site-verification": "REPLACE_WITH_YOUR_GOOGLE_SEARCH_CONSOLE_CODE",
-  },
 };
 
 const jsonLd = {
@@ -150,14 +147,6 @@ const websiteJsonLd = {
   author: {
     "@type": "Person",
     name: "Muhammad Zainur Roziqin",
-  },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${siteUrl}/?q={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
   },
 };
 
