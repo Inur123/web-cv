@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Gunakan www agar konsisten dengan Google Search Console
-  const siteUrl = "https://www.zainur.my.id";
+  const siteUrl = "https://www.zainur.id";
   const now = new Date();
 
   return [

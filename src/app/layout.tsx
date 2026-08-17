@@ -8,7 +8,7 @@ const plusJakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-const siteUrl = "https://www.zainur.my.id";
+const siteUrl = "https://www.zainur.id";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "Backend Developer PHP",
     "Next.js Developer",
     "MySQL Developer",
-    "zainur.my.id",
+    "zainur.id",
   ],
   authors: [{ name: "Muhammad Zainur Roziqin", url: siteUrl }],
   creator: "Muhammad Zainur Roziqin",
